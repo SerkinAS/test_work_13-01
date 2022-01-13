@@ -1,0 +1,38 @@
+{% extends "base_employee.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="{% url 'employees' %}?filter=А-Г">А-Г</a><br>
+            </div>
+            <div class="col">
+                <a href="{% url 'employees' %}?filter=Д-З">Д-З</a><br>
+            </div>
+            <div class="col">
+                <a href="{% url 'employees' %}?filter=И-М">И-М</a><br>
+            </div>
+            <div class="col">
+                <a href="{% url 'employees' %}?filter=Н-Р">Н-Р</a><br>
+            </div>
+            <div class="col">
+                <a href="{% url 'employees' %}?filter=С-Ф">С-Ф</a><br>
+            </div>
+            <div class="col">
+                <a href="{% url 'employees' %}?filter=Х-Ш">Х-Ш</a><br>
+            </div>
+            <div class="col">
+                <a href="{% url 'employees' %}?filter=Щ-Я">Щ-Я</a><br>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {% for employee in employees %}
+                    <a href="{{ employee.get_absolute_url }}">{{ employee.get_fullname }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

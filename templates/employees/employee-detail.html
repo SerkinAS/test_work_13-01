@@ -1,0 +1,28 @@
+{% extends "base_employee.html" %}
+
+{% block content %}
+    <div class="span8">
+        <table class="table">
+            <thead>
+            <th>ФИО</th>
+            <th>Дата рождения</th>
+            <th>Электронная почта</th>
+            <th>Дата начала работы</th>
+            <th>Дата окончания работы</th>
+            <th>Должность</th>
+            <th>Отдел</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ employee.get_fullname }}</td>
+                <td>{{ employee.date_birdth }}</td>
+                <td>{{ employee.email }}</td>
+                <td>{{ employee.date_job_start }}</td>
+                <td>{{ employee.date_job_end }}</td>
+                <td>{{ employee.position_at_work }}</td>
+                <td>{{ employee.group }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

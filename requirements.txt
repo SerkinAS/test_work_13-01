@@ -1,0 +1,11 @@
+asgiref==3.4.1
+bootstrap==0.1.0
+Django==4.0
+django-twitter-bootstrap==3.3.0
+pip==21.3.1
+pipeline==0.1.0
+psycopg2-binary==2.9.2
+setuptools==57.0.0
+sqlparse==0.4.2
+wheel==0.36.2
+
